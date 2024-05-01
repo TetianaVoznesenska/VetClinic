@@ -1,6 +1,5 @@
 package main.java.com.magicvet.model;
 
-import java.time.LocalDateTime;
 import java.util.Objects;
 
 public class Client {
@@ -8,17 +7,14 @@ public class Client {
     private String lastName;
     private String email;
     private Pet pet;
-    private final LocalDateTime registrationDate = LocalDateTime.now();
-
 
     @Override
     public String toString() {
         return "Client {"
-                + "\n\tfirstName = " + firstName
-                + ", lastName = " + lastName
-                + ", email = " + email
-                + ", \n\tPet = " + pet
-                + ", \n\tRegistration date = " + registrationDate
+                + "\n\tfirst name: " + firstName
+                + ", last name: " + lastName
+                + ", email: " + email
+                + "; \n\tPet: " + pet
                 + "\n}";
     }
 
@@ -37,7 +33,6 @@ public class Client {
     public int hashCode() {
         return Objects.hash(firstName, lastName, email, pet);
     }
-
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
