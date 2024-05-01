@@ -34,6 +34,7 @@ public class Client {
         return Objects.hash(firstName, lastName, email, pet);
     }
 
+
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }

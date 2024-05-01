@@ -10,6 +10,7 @@ public class ClientService {
 
     private static final String EMAIL_PATTERN = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
 
+
     public Client registerNewClient() {
         Client client = null;
         System.out.println("Please, provide the client's details");
@@ -20,6 +21,7 @@ public class ClientService {
             System.out.println("New client: " + client.getFirstName() + " "
                     + client.getLastName()
                     + " (" + client.getEmail() + ")");
+
         } else {
             System.out.println("Provided e-mail is invalid.");
         }

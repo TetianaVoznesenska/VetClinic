@@ -21,6 +21,7 @@ public class ApplicationRunner {
                 System.out.println("Pet has been added.");
 
                 System.out.println(client);
+
             }
         }
     }
