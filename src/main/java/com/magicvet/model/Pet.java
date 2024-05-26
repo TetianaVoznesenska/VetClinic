@@ -1,21 +1,31 @@
 package main.java.com.magicvet.model;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 
-public abstract class Pet {
+public class Pet {
+    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm dd/MM/yyyy");
+
     private String type;
     private String sex;
     private String age;
     private String name;
     private String ownerName;
+    private final LocalDateTime registrationDate = LocalDateTime.now();
 
     @Override
     public String toString() {
-        return "\n\tname: " + name
-                + ", type: " + type
-                + ", sex: " + sex
-                + ", age: " + age;
+        return "Pet {"
+                + "type = " + type
+                + ", sex = " + sex
+                + ", age = " + age
+                + ", name = " + name
+                + ", owner name = " + ownerName
+                + ", registration date = " + registrationDate.format(formatter)
+                + "}";
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -67,5 +77,9 @@ public abstract class Pet {
 
     public void setOwnerName(String ownerName) {
         this.ownerName = ownerName;
+    }
+
+    public LocalDateTime getRegistrationDate() {
+        return registrationDate;
     }
 }
