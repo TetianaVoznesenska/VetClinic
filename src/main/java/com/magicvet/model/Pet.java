@@ -2,6 +2,7 @@ package main.java.com.magicvet.model;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Objects;
 
 public class Pet {
     private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm dd/MM/yyyy");
@@ -25,13 +26,6 @@ public class Pet {
                 + "}";
     }
 
-    @Override
-    public String toString() {
-        return "\n\tname: " + name
-                + ", type: " + type
-                + ", sex: " + sex
-                + ", age: " + age;
-    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
