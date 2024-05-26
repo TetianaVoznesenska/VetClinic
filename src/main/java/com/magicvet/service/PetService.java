@@ -9,8 +9,6 @@ public class PetService {
     private static final String DOG_TYPE = "dog";
     private static final String CAT_TYPE = "cat";
 
-
-
     public Pet registerNewPet() {
         Pet pet = null;
 
@@ -25,7 +23,6 @@ public class PetService {
         return pet;
     }
 
-
     private Pet buildPet(String type) {
         Pet pet = type.equals(CAT_TYPE) ? new Cat() : new Dog();
         pet.setType(type);
@@ -38,8 +35,8 @@ public class PetService {
 
         if (type.equals(DOG_TYPE)) {
             System.out.print("Size (XS, S, M, L, XL): ");
-            String size= Main.SCANNER.nextLine();
-            ((Dog)pet).setSize(Dog.Size.valueOf(size));
+            String size = Main.SCANNER.nextLine();
+            ((Dog) pet).setSize(Dog.Size.valueOf(size));
         }
         return pet;
     }
