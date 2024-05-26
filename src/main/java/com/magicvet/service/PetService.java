@@ -34,8 +34,6 @@ public class PetService {
         Pet pet = buildPet(DOG_TYPE);
         Dog dog = petToDog(pet);
 
-        System.out.print("Size (XS, S, M, L, XL): ");
-        dog.setSize(Main.SCANNER.nextLine());
         return dog;
     }
 
@@ -48,6 +46,12 @@ public class PetService {
         pet.setName(Main.SCANNER.nextLine());
         System.out.print("Sex (male/female): ");
         pet.setSex(Main.SCANNER.nextLine());
+
+        if (type.equals(DOG_TYPE)) {
+            System.out.print("Size (XS, S, M, L, XL): ");
+            String size= Main.SCANNER.nextLine();
+            ((Dog)pet).setSize(Dog.Size.valueOf(size));
+        }
         return pet;
     }
 }
