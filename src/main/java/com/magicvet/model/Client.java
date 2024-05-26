@@ -11,10 +11,10 @@ public class Client {
     @Override
     public String toString() {
         return "Client {"
-                + "\n\tfirstName = " + firstName
-                + ", lastName = " + lastName
-                + ", email = " + email
-                + ", \n\tPet = " + pet
+                + "\n\tfirst name: " + firstName
+                + ", last name: " + lastName
+                + ", email: " + email
+                + "; \n\tPet: " + pet
                 + "\n}";
     }
 
@@ -33,7 +33,6 @@ public class Client {
     public int hashCode() {
         return Objects.hash(firstName, lastName, email, pet);
     }
-
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
