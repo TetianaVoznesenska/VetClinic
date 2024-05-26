@@ -19,6 +19,7 @@ public class Client {
                 + ", email = " + email
                 + ", \n\tPet = " + pet
                 + ", \n\tRegistration date = " + registrationDate
+
                 + "\n}";
     }
 
@@ -37,7 +38,6 @@ public class Client {
     public int hashCode() {
         return Objects.hash(firstName, lastName, email, pet);
     }
-
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;

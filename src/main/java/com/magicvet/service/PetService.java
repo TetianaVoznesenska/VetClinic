@@ -9,11 +9,10 @@ public class PetService {
     private static final String DOG_TYPE = "dog";
     private static final String CAT_TYPE = "cat";
 
-
     public Pet registerNewPet() {
         Pet pet = null;
 
-        System.out.print("Type dog/cat/other: ");
+        System.out.print("Type (dog/cat): ");
         String type = Main.SCANNER.nextLine();
 
         if (DOG_TYPE.equals(type) || CAT_TYPE.equals(type)) {
