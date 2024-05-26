@@ -1,6 +1,7 @@
 package main.java.com.magicvet;
 
 import main.java.com.magicvet.model.Dog;
+import main.java.com.magicvet.model.Pet;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -24,5 +25,6 @@ public class Sandbox {
         for (Dog dog : dogs) {
             System.out.println(dog.getSize());
         }
+        System.out.println(new Pet());
     }
 }

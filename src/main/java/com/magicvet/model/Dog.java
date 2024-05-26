@@ -7,9 +7,10 @@ public class Dog extends Pet {
 
     }
 
-    public Dog(Size size){
-      this.size = size;
+    public Dog(Size size) {
+        this.size = size;
     }
+
     public void setSize(Size size) {
         this.size = size;
     }
@@ -26,10 +27,12 @@ public class Dog extends Pet {
         XL(5),
         UNKNOWN(0);
         private final int value;
+
         Size(int value) {
             this.value = value;
         }
-        public int getValue () {
+
+        public int getValue() {
             return value;
         }
     }
