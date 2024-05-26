@@ -9,8 +9,6 @@ public class PetService {
     private static final String DOG_TYPE = "dog";
     private static final String CAT_TYPE = "cat";
 
-
-
     public Pet registerNewPet() {
         Pet pet = null;
 
