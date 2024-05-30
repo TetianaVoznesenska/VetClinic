@@ -16,7 +16,7 @@ public class ClientService {
         System.out.print("E-mail: ");
         String email = Main.SCANNER.nextLine();
         if (isEmailValid(email)) {
-            client = buildCient(email);
+            client = buildClient(email);
             System.out.println("New client: " + client.getFirstName() + " "
                     + client.getLastName()
                     + " (" + client.getEmail() + ")");
@@ -27,13 +27,16 @@ public class ClientService {
         return client;
     }
 
-    private static Client buildCient(String email) {
+    private static Client buildClient(String email) {
         Client client = new Client();
         client.setEmail(email);
         System.out.print("First name: ");
         client.setFirstName(Main.SCANNER.nextLine());
         System.out.print("Last name: ");
         client.setLastName(Main.SCANNER.nextLine());
+        System.out.println("Location: ");
+        String location = Main.SCANNER.nextLine();
+        client.setLocation(Client.Location.valueOf(location));
         return client;
     }
 
