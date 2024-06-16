@@ -6,7 +6,9 @@ import main.java.com.magicvet.model.Dog;
 import main.java.com.magicvet.model.Pet;
 
 public class PetService {
+
     private static final String DOG_TYPE = "dog";
+
     private static final String CAT_TYPE = "cat";
 
     public Pet registerNewPet() {
@@ -35,7 +37,7 @@ public class PetService {
         if (type.equals(DOG_TYPE)) {
             System.out.println("Size (XS, S, M, L, XL): ");
             String size = Main.SCANNER.nextLine();
-            ((Dog) pet).setSize(Dog.Size.valueOf(size));
+            ((Dog) pet).setSize(Dog.Size.fromString(size));
         }
         return pet;
     }

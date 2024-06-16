@@ -5,13 +5,19 @@ import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 
 public class Pet {
-    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm dd/MM/yyyy");
+
+    static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm dd/MM/yyyy");
 
     private String type;
+
     private String sex;
+
     private String age;
+
     private String name;
+
     private String ownerName;
+
     private final LocalDateTime registrationDate = LocalDateTime.now();
 
     @Override

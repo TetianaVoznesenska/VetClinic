@@ -1,10 +1,23 @@
 package main.java.com.magicvet.model;
 
 public class Dog extends Pet {
+
     private Size size;
 
     public Dog() {
+    }
 
+    @Override
+    public String toString() {
+        return "Pet {"
+                + "type = " + getType()
+                + ", sex = " + getSex()
+                + ", age = " + getAge()
+                + ", name = " + getName()
+                + ", size = " + getSize()
+                + ", owner name = " + getOwnerName()
+                + ", registration date = " + getRegistrationDate().format(formatter)
+                + "}";
     }
 
     public Dog(Size size) {
@@ -30,6 +43,16 @@ public class Dog extends Pet {
 
         Size(int value) {
             this.value = value;
+        }
+
+        public static Size fromString(String value) {
+            for (Size size : values()) {
+                if (size.toString().equals(value)) {
+                    return size;
+                }
+            }
+            System.out.println("Unable to parse value '" + value + "'. Using default value: " + UNKNOWN);
+            return UNKNOWN;
         }
 
         public int getValue() {
