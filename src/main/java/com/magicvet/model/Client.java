@@ -74,20 +74,8 @@ public class Client {
         return email;
     }
 
-    public List<Pet> getPets() {
-        return pets;
-    }
-
-    public void setPets(List<Pet> pets) {
-        this.pets = pets;
-    }
-
     public void addPet(Pet pet) {
         pets.add(pet);
-    }
-
-    public LocalDateTime getClientRegistrationDate() {
-        return clientRegistrationDate;
     }
 
     public Location getLocation() {
