@@ -16,7 +16,7 @@ public class Dog extends Pet {
                 + ", name = " + getName()
                 + ", size = " + getSize()
                 + ", owner name = " + getOwnerName()
-                + ", registration date = " + getRegistrationDate().format(formatter)
+                + ", registration date = " + getRegistrationDate().format(FORMATTER)
                 + "}";
     }
 

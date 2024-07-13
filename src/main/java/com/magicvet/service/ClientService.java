@@ -36,7 +36,7 @@ public class ClientService {
         client.setLastName(Main.SCANNER.nextLine());
         System.out.println("Location: ");
         Client.Location location;
-        String locationInput = Main.SCANNER.nextLine();
+        String locationInput = Main.SCANNER.nextLine().toUpperCase();
         try {
             location = Client.Location.valueOf(locationInput);
         } catch (IllegalArgumentException e) {

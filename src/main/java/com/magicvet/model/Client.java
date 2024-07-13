@@ -8,7 +8,7 @@ import java.util.Objects;
 
 public class Client {
 
-    private static final DateTimeFormatter clientFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm");
+    private static final DateTimeFormatter CLIENT_FORMATTER = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm");
 
     private String firstName;
 
@@ -30,7 +30,7 @@ public class Client {
                 + ", email = " + email
                 + ", location = " + location
                 + ", \n\tPets = " + pets
-                + ", \n\tRegistration date = " + clientRegistrationDate.format(clientFormatter)
+                + ", \n\tRegistration date = " + clientRegistrationDate.format(CLIENT_FORMATTER)
                 + "\n}";
     }
 

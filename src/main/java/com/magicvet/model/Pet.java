@@ -6,7 +6,7 @@ import java.util.Objects;
 
 public class Pet {
 
-    static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm dd/MM/yyyy");
+    static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("HH:mm dd/MM/yyyy");
 
     private String type;
 
@@ -28,7 +28,7 @@ public class Pet {
                 + ", age = " + age
                 + ", name = " + name
                 + ", owner name = " + ownerName
-                + ", registration date = " + registrationDate.format(formatter)
+                + ", registration date = " + registrationDate.format(FORMATTER)
                 + "}";
     }
 
